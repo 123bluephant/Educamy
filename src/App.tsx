@@ -50,6 +50,13 @@ import PaymentTracking from './pages/features/SchoolERP/FeeManagement/PaymentTra
 import ReceiptGeneration from './pages/features/SchoolERP/FeeManagement/ReceiptGeneration';
 import DueManagement from './pages/features/SchoolERP/FeeManagement/DueManagement';
 
+// Report Management features
+import AcademicDetails from './pages/features/SchoolERP/ReportManagement/AcademicDetails';
+import FinancialDetails from './pages/features/SchoolERP/ReportManagement/FinancialDetails';
+import AttendenceDetails from './pages/features/SchoolERP/ReportManagement/AttendenceDetails';
+import PerformanceDetails from './pages/features/SchoolERP/ReportManagement/PerformanceDeatails';
+import CustomReports from './pages/features/SchoolERP/ReportManagement/CustomReports';
+
 function App() {
   return (
     <BrowserRouter>
@@ -103,6 +110,13 @@ function App() {
           <Route path="/features/school-erp/fee/payment-tracking" element={<PaymentTracking />} />
           <Route path="/features/school-erp/fee/receipt-generation" element={<ReceiptGeneration />} />
           <Route path="/features/school-erp/fee/due-management" element={<DueManagement />} />
+
+          {/* Report Management */}
+          <Route path="/features/school-erp/reports/academic" element={<AcademicDetails />} />
+          <Route path="/features/school-erp/reports/financial" element={<FinancialDetails />} />
+          <Route path="/features/school-erp/reports/attendance" element={<AttendenceDetails />} />
+          <Route path="/features/school-erp/reports/performance" element={<PerformanceDetails />} />
+          <Route path="/features/school-erp/reports/custom" element={<CustomReports />} />
         </Routes>
         <Footer />
       </div>
