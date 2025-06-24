@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Table, Select, DatePicker, Button, Space, Progress } from 'antd';
+import BackButton from '../../../../components/BackButton';
 
 const AttendenceDetails: React.FC = () => {
   const { Option } = Select;
@@ -54,6 +55,8 @@ const AttendenceDetails: React.FC = () => {
   ];
 
   return (
+    <div className="relative min-h-screen p-8">
+      <BackButton />
     <div className="p-6">
       <Card title="Attendance Report" className="shadow-lg">
         <Space direction="horizontal" className="mb-4">
@@ -66,6 +69,7 @@ const AttendenceDetails: React.FC = () => {
         </Space>
         <Table columns={columns} dataSource={dummyData} />
       </Card>
+    </div>
     </div>
   );
 };

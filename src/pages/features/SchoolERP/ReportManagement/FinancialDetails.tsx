@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Table, Select, DatePicker, Button, Space, Statistic, Row, Col } from 'antd';
+import BackButton from '../../../../components/BackButton';
 
 const FinancialDetails: React.FC = () => {
   const { Option } = Select;
@@ -45,6 +46,8 @@ const FinancialDetails: React.FC = () => {
   ];
 
   return (
+    <div className="relative min-h-screen p-8">
+      <BackButton />
     <div className="p-6">
       <Row gutter={16} className="mb-6">
         <Col span={6}>
@@ -80,6 +83,7 @@ const FinancialDetails: React.FC = () => {
         </Space>
         <Table columns={columns} dataSource={dummyData} />
       </Card>
+    </div>
     </div>
   );
 };

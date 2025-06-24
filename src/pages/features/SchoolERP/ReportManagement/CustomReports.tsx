@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Select, Button, Space, Divider, Input, Checkbox, Table } from 'antd';
+import BackButton from '../../../../components/BackButton';
 
 const CustomReports: React.FC = () => {
   const { Option } = Select;
@@ -28,6 +29,8 @@ const CustomReports: React.FC = () => {
   }));
 
   return (
+    <div className="relative min-h-screen p-8">
+      <BackButton />
     <div className="p-6">
       <Card title="Custom Report Generator" className="shadow-lg">
         <Form form={form} layout="vertical">
@@ -66,6 +69,7 @@ const CustomReports: React.FC = () => {
           </div>
         )}
       </Card>
+    </div>
     </div>
   );
 };

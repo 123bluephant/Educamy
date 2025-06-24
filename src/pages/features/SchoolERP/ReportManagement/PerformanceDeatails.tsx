@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Table, Select, DatePicker, Button, Space, Row, Col } from 'antd';
 import { Area } from '@ant-design/plots';
+import BackButton from '../../../../components/BackButton';
 
 const PerformanceDetails: React.FC = () => {
   const { Option } = Select;
@@ -61,6 +62,8 @@ const PerformanceDetails: React.FC = () => {
   };
 
   return (
+    <div className="relative min-h-screen p-8">
+      <BackButton />
     <div className="p-6">
       <Card title="Performance Analysis" className="shadow-lg mb-6">
         <Row gutter={16}>
@@ -81,6 +84,7 @@ const PerformanceDetails: React.FC = () => {
         </Space>
         <Table columns={columns} dataSource={dummyData} />
       </Card>
+    </div>
     </div>
   );
 };
