@@ -129,6 +129,17 @@ const SchoolERP: React.FC = () => {
       }
     }
 
+    // Report Management links
+    if (section === 'report') {
+      switch (feature) {
+        case 'Academic Reports': return '/features/school-erp/reports/academic';
+        case 'Financial Reports': return '/features/school-erp/reports/financial';
+        case 'Attendance Reports': return '/features/school-erp/reports/attendance';
+        case 'Performance Analytics': return '/features/school-erp/reports/performance';
+        case 'Custom Report Generation': return '/features/school-erp/reports/custom';
+      }
+    }
+
     // Default section-based paths
     return `/features/school-erp/${section}/${feature.toLowerCase().replace(/ /g, '-')}`;
   };
