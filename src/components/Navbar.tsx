@@ -33,12 +33,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <button className="bg-green-500 text-white px-4 py-1 rounded text-sm hover:bg-green-600 transition-colors">
+            <Link to="/signup" className="bg-green-500 text-white px-4 py-1 rounded text-sm hover:bg-green-600 transition-colors">
               GET STARTED FOR FREE
-            </button>
-            <button className="bg-white text-gray-700 px-4 py-1 rounded text-sm border border-gray-300 hover:bg-gray-50 transition-colors">
+            </Link>
+            <Link to="/login" className="bg-white text-gray-700 px-4 py-1 rounded text-sm border border-gray-300 hover:bg-gray-50 transition-colors">
               LOGIN
-            </button>
+            </Link>
           </div>
         </div>
       </div>

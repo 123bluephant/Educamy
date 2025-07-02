@@ -216,7 +216,7 @@ const SchoolERP: React.FC = () => {
                     </Link>
                   </div>
                 ))}
-              </div>
+              </div>             
             </div>
           </div>
         </div>

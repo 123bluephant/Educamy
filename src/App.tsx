@@ -9,6 +9,10 @@ import Privacy from './pages/Privacy';
 import Blog from './pages/Blog';
 import Terms from './pages/Terms';
 
+// Auth pages
+import Login from './pages/Auth/Login';
+import Signup from './pages/Auth/Signup';
+
 // Feature pages
 import SchoolERP from './pages/features/SchoolERP';
 import ParentConnect from './pages/features/ParentConnect';
@@ -41,7 +45,7 @@ import ProfessionalDevelopment from './pages/features/SchoolERP/StaffManagement/
 import StaffRecruitment from './pages/features/SchoolERP/StaffManagement/StaffRecruitment';
 import PayrollSystem from './pages/features/SchoolERP/StaffManagement/PayrollSystem';
 import PerformanceEvaluation from './pages/features/SchoolERP/StaffManagement/PerformanceEvaluation';
-import StaffLeaveManagement from './pages/features/SchoolERP/StaffManagement/StaffLeaveManagement';
+import StaffLeaveManagement from './pages/features/SchoolERP/StaffManagement/LeaveManagement';
 
 // Fee Management
 import FeeStructureSetup from './pages/features/SchoolERP/FeeManagement/FeeStructureSetup';
@@ -92,6 +96,11 @@ import EventCalendar from './pages/features/SchoolERP/SchoolManagement/Campus/Co
 import EmergencyAlerts from './pages/features/SchoolERP/SchoolManagement/Campus/Communication/EmergencyAlerts';
 import FeedbackSurveys from './pages/features/SchoolERP/SchoolManagement/Campus/Communication/FeedbackSurveys';
 
+
+// Parent Connect System
+import DirectCommunication from './pages/features/ParentConnect/DirectCommunication';
+import PCProgressTracking from './pages/features/ParentConnect/PCProgressTracking';
+
 function App() {
   return (
     <BrowserRouter>
@@ -104,6 +113,10 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/terms" element={<Terms />} />
+          
+          {/* Auth Routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           
           {/* Feature Routes */}
           <Route path="/features/school-erp" element={<SchoolERP />} />
@@ -167,7 +180,7 @@ function App() {
           <Route path="/features/school-erp/staff/staff-recruitment" element={<StaffRecruitment />} />
           <Route path="/features/school-erp/staff/performance-evaluation" element={<PerformanceEvaluation />} />
           <Route path="/features/school-erp/staff/payroll-system" element={<PayrollSystem />} />
-          <Route path="/features/school-erp/staff/staff-leave-management" element={<StaffLeaveManagement />} />
+          <Route path="/features/school-erp/staff/leave-management" element={<LeaveManagement />} />
 
           {/* Fee Management Routes */}
           <Route path="/features/school-erp/fee/fee-structure-setup" element={<FeeStructureSetup />} />
@@ -182,6 +195,11 @@ function App() {
           <Route path="/features/school-erp/reports/attendance" element={<AttendenceDetails />} />
           <Route path="/features/school-erp/reports/performance" element={<PerformanceDetails />} />
           <Route path="/features/school-erp/reports/custom" element={<CustomReports />} />
+
+
+          {/* Parent Connect System */}
+          <Route path="/features/parent-connect/communication" element={<DirectCommunication />} />
+          <Route path="/features/parent-connect/progress-tracking" element={<PCProgressTracking />} />
 
         </Routes>
         <Footer />
